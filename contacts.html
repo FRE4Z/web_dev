@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Связаться и заказать инвентарь - Подача</title>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html"><img src="images/ball.png" width="32" height="32" ></a>
+      <a href="index.html" aria-label="Подача - на главную">ПОДАЧА</a>
+    </div>
+    <nav aria-label="Основная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="rules.html">Правила</a></li>
+      <li><a href="positions.html">Позиции</a></li>
+      <li><a href="history.html">История</a></li>
+      <li><a href="training.html">Тренировки</a></li>
+      <li><a href="equipment.html">Инвентарь</a></li>
+      <li><a href="contacts.html" aria-current="page"><strong>Контакты</strong></a></li>
+      <li><a href="dom-read.html">DOM: чтение</a></li>
+      <li><a href="dom-change.html">DOM: изменение</a></li>
+      <li><a href="algorithm.html">Алгоритм</a></li>
+      <li><a href="rules.html#court">Площадка</a></li>
+      <li><a href="https://www.fivb.com/volleyball/the-game/official-volleyball-rules/" target="_blank" rel="noopener noreferrer">Правила FIVB</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main id="top">
+    <p>Обратная связь</p>
+    <h1>Контакты и заказ инвентаря</h1>
+    <p>Обе формы отправляют заполненные значения в запросе на сайт Bing и открывают его после нажатия кнопки. Данные могут попасть в адресную строку, историю браузера и журналы Bing - используйте только учебные примеры, а не реальные личные данные.</p>
+    <nav aria-label="Навигация по странице">
+      <a href="#contact-form">Контактные данные</a><a href="#order-form">Заказ в магазине</a>
+    </nav>
+
+    <section id="contact-form">
+      <h2>Форма обратной связи</h2>
+      <p>Для выполнения учебного задания заполните поля тестовыми контактными данными.</p>
+      <form action="https://www.bing.com/search" method="get">
+        <label for="surname">Фамилия</label>
+        <input id="surname" name="surname" type="text" autocomplete="family-name" required>
+
+        <label for="firstName">Имя</label>
+        <input id="firstName" name="firstName" type="text" autocomplete="given-name" required>
+
+        <label for="group">Группа</label>
+        <input id="group" name="group" type="text" placeholder="Например, БПИ-241" required>
+
+        <label for="mobile">Мобильный телефон</label>
+        <input id="mobile" name="mobile" type="tel" autocomplete="tel" placeholder="+7 900 000-00-00" required>
+
+        <label for="email">Электронная почта</label>
+        <input id="email" name="email" type="email" autocomplete="email" required>
+
+        <label for="sentAt">Дата отправки сообщения</label>
+        <input id="sentAt" name="sentAt" type="date" required>
+
+        <button type="submit">Отправить контактные данные в Bing</button>
+      </form>
+    </section>
+
+    <section id="order-form">
+      <h2>Заказ в волейбольном магазине</h2>
+      <p>Это учебный пример: заказ не оформляется. Значения полей передаются Bing как параметры запроса.</p>
+      <form action="https://www.bing.com/search" method="get">
+        <input type="hidden" name="formSource" value="volleyball-shop">
+
+        <label for="product">Товар</label>
+        <input id="product" name="product" type="text" value="Волейбольный мяч Mikasa" required>
+
+        <label for="quantity">Количество</label>
+        <input id="quantity" name="quantity" type="number" min="1" max="20" value="1" required>
+
+        <fieldset>
+          <legend>Способ получения</legend>
+          <label><input name="delivery" type="radio" value="pickup" checked required> Самовывоз</label>
+          <label><input name="delivery" type="radio" value="courier"> Курьер</label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Дополнительно</legend>
+          <label><input name="extras" type="checkbox" value="gift-wrap"> Подарочная упаковка</label>
+          <label><input name="extras" type="checkbox" value="pump"> Добавить насос</label>
+        </fieldset>
+
+        <label for="deliveryDate">Желаемая дата получения</label>
+        <input id="deliveryDate" name="deliveryDate" type="date" required>
+
+        <label for="orderPassword">Учебный код подтверждения</label>
+        <input id="orderPassword" name="demoCode" type="password" value="demo-code" autocomplete="off" readonly>
+        <small>Отправляется только фиксированный учебный код. Не вводите здесь настоящий пароль.</small>
+
+        <button type="submit">Отправить заказ в Bing</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Решение алгоритмической задачи - Подача</title>
+  <script src="js/algorithm.js" defer></script>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html"><img src="images/ball.png" width="32" height="32" ></a>
+      <a href="index.html" aria-label="Подача - на главную">ПОДАЧА</a>
+    </div>
+    <nav aria-label="Основная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="rules.html">Правила</a></li>
+      <li><a href="positions.html">Позиции</a></li>
+      <li><a href="history.html">История</a></li>
+      <li><a href="training.html">Тренировки</a></li>
+      <li><a href="equipment.html">Инвентарь</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="dom-read.html">DOM: чтение</a></li>
+      <li><a href="dom-change.html">DOM: изменение</a></li>
+      <li><a href="algorithm.html" aria-current="page"><strong>Алгоритм</strong></a></li>
+      <li><a href="rules.html#court">Площадка</a></li>
+      <li><a href="https://www.fivb.com/volleyball/the-game/official-volleyball-rules/" target="_blank" rel="noopener noreferrer">Правила FIVB</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main id="top">
+    <p>Алгоритмическая задача №1003</p>
+    <h1>Решение алгоритмической задачи</h1>
+    <p>Можно ли из бревна, имеющего диаметр поперечного сечения D, выпилить квадратный брус шириной A?</p>
+    <nav aria-label="Навигация по странице">
+      <a href="#condition">Условие</a><a href="#calculator">Проверка размеров</a>
+    </nav>
+
+    <section id="condition">
+      <h2>Геометрическое условие</h2>
+      <p>Квадратное поперечное сечение должно целиком поместиться внутри круглого сечения бревна. Диагональ квадрата равна <code>A × √2</code>; она не должна превышать диаметр бревна.</p>
+      <p>Ответ «да», если <code>A × √2 ≤ D</code>, или равносильно <code>A ≤ D / √2</code>.</p>
+    </section>
+
+    <section id="calculator">
+      <h2>Проверьте свои значения</h2>
+      <form id="fit-form">
+        <label for="diameter">Диаметр бревна D (см)</label>
+        <input id="diameter" name="diameter" type="number" min="0.01" step="any" required>
+        <label for="side">Ширина квадратного бруса A (см)</label>
+        <input id="side" name="side" type="number" min="0.01" step="any" required>
+        <button type="submit">Проверить</button>
+        <p id="fit-result" role="status" aria-live="polite">Введите положительные значения D и A.</p>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

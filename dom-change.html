@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Изменяем кириллицу на латиницу по клику - Подача</title>
+  <script src="js/dom-change.js" defer></script>
+</head>
+<body>
+  <header>
+    <div>
+      <a href="index.html"><img src="images/ball.png" width="32" height="32" ></a>
+      <a href="index.html" aria-label="Подача - на главную">ПОДАЧА</a>
+    </div>
+    <nav aria-label="Основная навигация">
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="rules.html">Правила</a></li>
+      <li><a href="positions.html">Позиции</a></li>
+      <li><a href="history.html">История</a></li>
+      <li><a href="training.html">Тренировки</a></li>
+      <li><a href="equipment.html">Инвентарь</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+      <li><a href="dom-read.html">DOM: чтение</a></li>
+      <li><a href="dom-change.html" aria-current="page"><strong>DOM: изменение</strong></a></li>
+      <li><a href="algorithm.html">Алгоритм</a></li>
+      <li><a href="rules.html#court">Площадка</a></li>
+      <li><a href="https://www.fivb.com/volleyball/the-game/official-volleyball-rules/" target="_blank" rel="noopener noreferrer">Правила FIVB</a></li>
+    </ul>
+  </nav>
+  </header>
+  <main id="top">
+    <p>Задание DOM + JavaScript</p>
+    <h1>Изменяем кириллицу на латиницу по клику</h1>
+
+    <div aria-label="Учебный макет страниц 2 и 3">
+      <section aria-labelledby="passport-main-title">
+        <h2 id="passport-main-title">Страница 2 · Основные сведения</h2>
+        <p>Фамилия: <strong id="passport-surname">Гаврилов</strong></p>
+        <p>Имя: <strong id="passport-first-name">Сергей</strong></p>
+        <p>Год рождения: <strong id="passport-birth-year">2007</strong></p>
+        <p>Место рождения: <strong id="passport-birthplace">Москва</strong></p>
+      </section>
+      <section aria-labelledby="passport-address-title">
+        <h2 id="passport-address-title">Страница 3 · Дополнительные сведения</h2>
+        <p>Пол: <strong id="passport-gender">Мужской (пример)</strong></p>
+        <p>Дата выдачи: <strong>01.01.2024</strong></p>
+        <p>Кем выдан: <strong id="passport-issuer">МФЦ</strong></p>
+      </section>
+    </div>
+
+    <button id="translate-names" type="button">Переключить на латиницу</button>
+  </main>
+</body>
+</html>
